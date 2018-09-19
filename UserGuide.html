@@ -13,20 +13,27 @@
 <li><a href="#quick-start">2. Quick Start</a></li>
 <li><a href="#Features">3. Features</a>
 <ul class="sectlevel2">
-<li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
-<li><a href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></li>
-<li><a href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></li>
-<li><a href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></li>
-<li><a href="#locating-persons-by-name-code-find-code">3.5. Locating persons by name: <code>find</code></a></li>
-<li><a href="#deleting-a-person-code-delete-code">3.6. Deleting a person : <code>delete</code></a></li>
-<li><a href="#selecting-a-person-code-select-code">3.7. Selecting a person : <code>select</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">3.8. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">3.9. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.10. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.11. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.12. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.13. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.14. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#creating-a-group-group">3.1. creating a group: 'group'</a></li>
+<li><a href="#adding-a-group-cal">3.2. Adding a group: 'cal'</a></li>
+<li><a href="#populating-a-group-pop">3.3. Populating a group: 'pop'</a></li>
+<li><a href="#create-n-number-of-group-distributed-equally-based-on-nationality-or-gender-or-both-makegroup">3.4. Create N number of group, distributed equally based on nationality or gender or both: 'makegroup'</a></li>
+<li><a href="#sending-email-to-group-of-persons-sendmail">3.5. Sending Email to Group of Persons: 'sendmail'</a></li>
+<li><a href="#list-a-group-of-students-scorefilter">3.6. List a group of students: 'scorefilter'</a></li>
+<li><a href="#adding-deleting-tags-automatically-addtag-deletetag">3.7. Adding/deleting tags automatically: 'addtag/deletetag'</a></li>
+<li><a href="#viewing-help-code-help-code">3.8. Viewing help : <code>help</code></a></li>
+<li><a href="#adding-a-person-code-add-code">3.9. Adding a person: <code>add</code></a></li>
+<li><a href="#listing-all-persons-code-list-code">3.10. Listing all persons : <code>list</code></a></li>
+<li><a href="#editing-a-person-code-edit-code">3.11. Editing a person : <code>edit</code></a></li>
+<li><a href="#locating-persons-by-name-code-find-code">3.12. Locating persons by name: <code>find</code></a></li>
+<li><a href="#deleting-a-person-code-delete-code">3.13. Deleting a person : <code>delete</code></a></li>
+<li><a href="#selecting-a-person-code-select-code">3.14. Selecting a person : <code>select</code></a></li>
+<li><a href="#listing-entered-commands-code-history-code">3.15. Listing entered commands : <code>history</code></a></li>
+<li><a href="#undoing-previous-command-code-undo-code">3.16. Undoing previous command : <code>undo</code></a></li>
+<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.17. Redoing the previously undone command : <code>redo</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">3.18. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.19. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">3.20. Saving the data</a></li>
+<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.21. Encrypting data files <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -97,6 +104,74 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="sect1">
 <h2 id="Features"><a class="link" href="#Features">3. Features</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Command Format: Follows the upstream addressbook</p>
+</div>
+<div class="sect2">
+<h3 id="creating-a-group-group"><a class="link" href="#creating-a-group-group">3.1. creating a group: 'group'</a></h3>
+<div class="paragraph">
+<p>Creates a group in the address book
+Format: group n/NAME
+Creates a group with the specified NAME
+Example: group n/CS2113</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-group-cal"><a class="link" href="#adding-a-group-cal">3.2. Adding a group: 'cal'</a></h3>
+<div class="paragraph">
+<p>Adds a group to a date on the calendar
+Format: cal n/NAME d/DATE
+Adds a group with a specified NAME to a specified DATE (DDMMYY) on the calendar
+Example: cal n/CS2113 d/231018</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="populating-a-group-pop"><a class="link" href="#populating-a-group-pop">3.3. Populating a group: 'pop'</a></h3>
+<div class="paragraph">
+<p>Adds person(s) to a group
+Format: pop n/NAME INDEX [MORE_INDICES]
+Adds a person at specified INDEX(s) to group at specified NAME. The index refers to the index number shown in the displayed person list. The index must be a positive integer 1, 2, 3, …​
+Example: pop n/CS2113 2 3 4 5</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="create-n-number-of-group-distributed-equally-based-on-nationality-or-gender-or-both-makegroup"><a class="link" href="#create-n-number-of-group-distributed-equally-based-on-nationality-or-gender-or-both-makegroup">3.4. Create N number of group, distributed equally based on nationality or gender or both: 'makegroup'</a></h3>
+<div class="paragraph">
+<p>Make multiple groups of N determined by the user, with a group name which will enumerate from 1 and user is able to select the condition to distribute equally via Gender &amp; Nationally.
+Format: makegroup gn/GROUP_NAME n/NthGROUP g/GENDER l/LOCAL
+Create N number of equally distributed groups based on gender &amp; nationality. GROUP_NAME is specified in String format, which a number will enumerate from 1 at the end of the string. N must be a positive integer to tell the system the number of group to be created. GENDER &amp; LOCAL are boolean flags to enable the system to distribute equally based on.
+Example: makegroup gn/T13- n/5 g/true l/true</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sending-email-to-group-of-persons-sendmail"><a class="link" href="#sending-email-to-group-of-persons-sendmail">3.5. Sending Email to Group of Persons: 'sendmail'</a></h3>
+<div class="paragraph">
+<p>Sends an email to all persons belonging to a group.
+Format: sendmail gn/GROUP_NAME t/EMAIL_TITLE [b/EMAIL_BODY]
+E.g. sendmail CS2113T Please be reminded to bring your calculator tomorrow.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="list-a-group-of-students-scorefilter"><a class="link" href="#list-a-group-of-students-scorefilter">3.6. List a group of students: 'scorefilter'</a></h3>
+<div class="paragraph">
+<p>List out the standard deviation of the score data set from all students.
+Example: scorefilter
+Show the Standard deviation of the students exam score
+Format: scoreFilter [filter_standard]
+Example: scorefilter 56
+This will query all the students who score below 56 into a new group, allowing the lecturer to help these people in need.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-deleting-tags-automatically-addtag-deletetag"><a class="link" href="#adding-deleting-tags-automatically-addtag-deletetag">3.7. Adding/deleting tags automatically: 'addtag/deletetag'</a></h3>
+<div class="paragraph">
+<p>Add/delete certain tags for certain group of people (e.g student perform excellent;  students need to meet later; student need extra help)) automatically
+Format: addtag GROUP_NAME  tag/
+Format: deletetag  GROUP_NAME  tag/
+Example: addtag TAG_STRING tag/need more attention
+Example: deletetag TAG_STRING  tag/need more attention
+It will add a tag which is need more attention to all the students in the       studentScoreLow group</p>
+</div>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -120,14 +195,15 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 </div>
 </div>
 </div>
+</div>
 <div class="sect2">
-<h3 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></h3>
+<h3 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">3.8. Viewing help : <code>help</code></a></h3>
 <div class="paragraph">
 <p>Format: <code>help</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></h3>
+<h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">3.9. Adding a person: <code>add</code></a></h3>
 <div class="paragraph">
 <p>Adds a person to the address book<br>
 Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code></p>
@@ -159,14 +235,14 @@ A person can have any number of tags (including 0)
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></h3>
+<h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">3.10. Listing all persons : <code>list</code></a></h3>
 <div class="paragraph">
 <p>Shows a list of all persons in the address book.<br>
 Format: <code>list</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></h3>
+<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">3.11. Editing a person : <code>edit</code></a></h3>
 <div class="paragraph">
 <p>Edits an existing person in the address book.<br>
 Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code></p>
@@ -211,7 +287,7 @@ Edits the name of the 2nd person to be <code>Betsy Crower</code> and clears all 
 </div>
 </div>
 <div class="sect2">
-<h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">3.5. Locating persons by name: <code>find</code></a></h3>
+<h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">3.12. Locating persons by name: <code>find</code></a></h3>
 <div class="paragraph">
 <p>Finds persons whose names contain any of the given keywords.<br>
 Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
@@ -256,7 +332,7 @@ Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>J
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">3.6. Deleting a person : <code>delete</code></a></h3>
+<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">3.13. Deleting a person : <code>delete</code></a></h3>
 <div class="paragraph">
 <p>Deletes the specified person from the address book.<br>
 Format: <code>delete INDEX</code></p>
@@ -297,7 +373,7 @@ Deletes the 1st person in the results of the <code>find</code> command.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">3.7. Selecting a person : <code>select</code></a></h3>
+<h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">3.14. Selecting a person : <code>select</code></a></h3>
 <div class="paragraph">
 <p>Selects the person identified by the index number used in the displayed person list.<br>
 Format: <code>select INDEX</code></p>
@@ -338,7 +414,7 @@ Selects the 1st person in the results of the <code>find</code> command.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.8. Listing entered commands : <code>history</code></a></h3>
+<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.15. Listing entered commands : <code>history</code></a></h3>
 <div class="paragraph">
 <p>Lists all the commands that you have entered in reverse chronological order.<br>
 Format: <code>history</code></p>
@@ -359,7 +435,7 @@ Format: <code>history</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.9. Undoing previous command : <code>undo</code></a></h3>
+<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.16. Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
 <p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
 Format: <code>undo</code></p>
@@ -404,7 +480,7 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 </div>
 </div>
 <div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.10. Redoing the previously undone command : <code>redo</code></a></h3>
+<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.17. Redoing the previously undone command : <code>redo</code></a></h3>
 <div class="paragraph">
 <p>Reverses the most recent <code>undo</code> command.<br>
 Format: <code>redo</code></p>
@@ -436,28 +512,28 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.11. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.18. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
 <p>Clears all entries from the address book.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.12. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.19. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.13. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.20. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.14. Encrypting data files <code>[coming in v2.0]</code></a></h3>
+<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.21. Encrypting data files <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
@@ -519,4 +595,4 @@ e.g.<code>select 2</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-19 03:41:32 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-19 05:36:27 UTC</div></div></div></body></html>
