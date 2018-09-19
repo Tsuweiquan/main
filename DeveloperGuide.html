@@ -1950,12 +1950,12 @@ for <code>RemarkCommandParser</code>.</p>
 <h2 id="product-scope"><a class="link" href="#product-scope">Appendix B: Product Scope</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Target user profile</strong>:</p>
+<p><strong>Target user profile</strong>: University Lecturers</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>has a need to manage a significant number of contacts</p>
+<p>has a need to manage a significant number of students</p>
 </li>
 <li>
 <p>prefer desktop apps over other types</p>
@@ -1972,7 +1972,7 @@ for <code>RemarkCommandParser</code>.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Value proposition</strong>: manage contacts faster than a typical mouse/GUI driven app</p>
+<p><strong>Value proposition</strong>: manage students and groups faster than a typical mouse/GUI driven app</p>
 </div>
 </div>
 </div>
@@ -2021,6 +2021,54 @@ for <code>RemarkCommandParser</code>.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">find a person by name</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">locate details of persons without having to go through the entire list</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">university lecturer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">create groups of students</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">have a list of all my students in a particular module/group</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">university lecturer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">add groups to a calender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">have a list of all my modules with their respective dates</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">university lecturer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">send an email to all students in any group</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">make module specific announcements</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">university lecturer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">print an attendance sheet of all persons in a specific group</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">university lecturer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">automatically distribute students into groups via criteria-based user options (gender/nationality)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">efficiently from random groups</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">university lecturer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter student contacts by their scores</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">generate a list of students who need my help</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">university lecturer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">automatically add tags for specific student groups</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">efficiently mark out weak students</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">university lecturer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">create a group chat for my students to have an open discussion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">efficiently mediate discussions</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
@@ -2096,6 +2144,475 @@ for <code>RemarkCommandParser</code>.</p>
 </li>
 </ul>
 </div>
+<h3 id="use-case-create-groups-uc01" class="discrete">Use case: Create Groups (UC01)</h3>
+<div class="paragraph">
+<p><strong>Precondition</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Address Book is not empty</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User creates a group</p>
+</li>
+<li>
+<p>AddressBook confirms that group is created</p>
+</li>
+<li>
+<p>User adds students to group</p>
+</li>
+<li>
+<p>AddressBook confirms that students were added</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a. AddressBook detects error in data entered.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. AddressBook rejects command entered.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3a. AddressBook detects error in data entered.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. AddressBook rejects command entered.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3b. AddressBook detects group is not created.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3b1. AddressBook asks user to create group.</p>
+<div class="paragraph">
+<p>Use case resumes at step 1.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-calendar-uc02" class="discrete">Use case: Calendar (UC02)</h3>
+<div class="paragraph">
+<p><strong>Precondition</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Calender is created</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User adds group to date</p>
+</li>
+<li>
+<p>AddressBook confirms that group is added</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a. AddressBook detects error in data entered.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. AddressBook rejects command entered.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1b. AddressBook detects group is not created.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b1. AddressBook rejects command entered.</p>
+</li>
+<li>
+<p>1b2. AddressBook asks user to create group.</p>
+</li>
+<li>
+<p>1b3. User creates group (UC01).</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-grading-filter" class="discrete">Use case: Grading Filter</h3>
+<div class="paragraph">
+<p><strong>Precondition</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Student scores exist in the AddressBook</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests AddressBook to generate a list of students that need extra help</p>
+</li>
+<li>
+<p>AddressBook displays standard deviation of marks</p>
+</li>
+<li>
+<p>User enters the filter standard</p>
+</li>
+<li>
+<p>AddressBook outputs results</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a. AddressBook detects error in data entered.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. AddressBook rejects command.</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a. AddressBook detects wrong standard set by user.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. AddressBook rejects command and displays error message.</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-mass-email-communication" class="discrete">Use case: Mass Email Communication</h3>
+<div class="paragraph">
+<p><strong>Precondition</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Group&#8217;s exist in the AddressBook</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to send email with specified content to a group</p>
+</li>
+<li>
+<p>AddressBook confirms with user that email was sent</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a. AddressBook detects error in data entered.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. AddressBook rejects command.</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b. AddressBook detects email content exceeds word limit.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b1. AddressBook rejects command and displays error message.</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-auto-grouping" class="discrete">Use case: Auto Grouping</h3>
+<div class="paragraph">
+<p><strong>Precondition</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Group&#8217;s exist in the AddressBook</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to create N groups of students distributed via gender or nationality</p>
+</li>
+<li>
+<p>AddressBook confirms with user that N groups have been created</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a. AddressBook detects error in data entered.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. AddressBook rejects command.</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b. AddressBook detects student count &lt; N.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b1. AddressBook outputs results using best-fit N value.</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-attendance-list-creation" class="discrete">Use case: Attendance List Creation</h3>
+<div class="paragraph">
+<p><strong>Precondition</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User has selected a group of students</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests AddressBook to generate Attendance List(.docx) of group</p>
+</li>
+<li>
+<p>AddressBook confirms with user that document has been generated</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a. AddressBook detects error in data entered.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. AddressBook rejects command.</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2b. AddressBook detects microsoft Word is not installed in computer.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2b1. AddressBook outputs Attendance List on GUI.</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-create-discussion-chatbox" class="discrete">Use case: Create Discussion ChatBox</h3>
+<div class="paragraph">
+<p><strong>Precondition</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User has selected a group of students</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests AddressBook to open a ChatBox</p>
+</li>
+<li>
+<p>AddressBook opens ChatBox</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a. AddressBook detects error in data entered.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. AddressBook rejects command.</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-automatically-adding-deleting-tags" class="discrete">Use case: Automatically Adding/Deleting Tags</h3>
+<div class="paragraph">
+<p><strong>Precondition</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>AddressBook has generated a list of students</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests tags to be added</p>
+</li>
+<li>
+<p>AddressBook confirms tags has been added</p>
+<div class="paragraph">
+<p>Use case ends</p>
+</div>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><em>{More to be added}</em></p>
 </div>
@@ -2111,6 +2628,15 @@ for <code>RemarkCommandParser</code>.</p>
 </li>
 <li>
 <p>Should be able to hold up to 1000 persons without a noticeable sluggishness in performance for typical usage.</p>
+</li>
+<li>
+<p>Should be user friendly and must not require education to use teh software</p>
+</li>
+<li>
+<p>Should work with data provided from excel sheet</p>
+</li>
+<li>
+<p>Should work with 128 bit platforms</p>
 </li>
 <li>
 <p>A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.</p>
@@ -2285,4 +2811,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-18 16:18:06 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-19 00:39:43 UTC</div></div></div></body></html>
