@@ -26,7 +26,7 @@ import seedu.address.model.person.Person;
 public class BrowserPanel extends UiPart<Region> {
 
     public static final String DEFAULT_PAGE = "default.html";
-    public static final String STUDENT_GRADE_PAGE_URL = "/docs/StudentGradeSummary.html";
+    public static final String STUDENT_GRADE_PAGE_URL = "/view/StudentGradeSummary.html";
     public static final String SEARCH_PAGE_URL =
             "https://se-edu.github.io/addressbook-level4/DummySearchPage.html?name=";
 
